@@ -1,0 +1,59 @@
+body {
+	display:flex;
+	justify-content: center;
+}
+
+.app-container{
+	display: flex;
+	align-items: flex-end;
+}
+
+.btn-container {
+	height: 25px;
+	width: 1000px;
+	display: flex;
+	justify-content: center;
+}
+
+.btn-randomize {
+	height: 25px;
+	width: 100px;
+}
+
+.btn-save {
+	height: 25px;
+	width: 100px;
+}
+
+.color-container {
+	display: flex;
+	align-items: flex-end;
+	height: 500px;
+	width: 1000px;
+}
+
+.color-panel1 {
+	background-color: #262626;
+	height: 500px;
+	width: 200px;
+}
+.color-panel2 {
+	background-color: #262626;
+	height: 500px;
+	width: 200px;
+}
+.color-panel3 {
+	background-color: #262626;
+	height: 500px;
+	width: 200px;
+}
+.color-panel4 {
+	background-color: #262626;
+	height: 500px;
+	width: 200px;
+}
+.color-panel5 {
+	background-color: #262626;
+	height: 500px;
+	width: 200px;
+}
