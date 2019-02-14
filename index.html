@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>HREXT07 R00lz!</title>
+  <title>CRUD-A-Color</title>
   <script
           src="https://code.jquery.com/jquery-3.3.1.js"
           integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
@@ -11,22 +11,12 @@
   <script src="app/app.js"></script>
   <link rel="stylesheet" href="css/style.css">
 
-
-  <!--
-
-√ create container
-√ create button
-√ input field
-√ container to display text
-√ update button(or maybe click on the container item)
-√ delete button
-container for the response-feedback (start with alert)
--->
 </head>
 <body>
 
+<!--
 <div class="container-main">
-  <header>My Cruddy App</header>
+  <header>CRUD-A-Color!</header>
   <div class="container-form">
     <input type="text" class="input-key" placeholder="enter key">
     <input type="text" class="input-value" placeholder="enter value">
@@ -36,6 +26,33 @@ container for the response-feedback (start with alert)
     <button class="btn-clear">Clear</button>
   </div>
   <div class="container-data"></div>
+</div>
+-->
+
+<!-- This container holds 5 color panels, whose colors will be generated randomly -->
+<div class="app-conatiner">
+  <div class="color-container">
+    <div class="color-panel1">
+      <div class="color-label1"></div>
+    </div>
+    <div class="color-panel2">
+      <div class="color-label2"></div>
+    </div>
+    <div class="color-panel3">
+      <div class="color-label3"></div>
+    </div>
+    <div class="color-panel4">
+      <div class="color-label4"></div>
+    </div>
+    <div class="color-panel5">
+      <div class="color-label5"></div>
+    </div>
+  </div>
+
+  <div class="btn-container">
+    <button class="btn-randomize">Randomize</button>
+    <button class="btn-save">Save</button> 
+  </div>  
 </div>
 
 </body>
