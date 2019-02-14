@@ -12,8 +12,8 @@ Extending John's CRUD app framework, to create, save, and delete favorite colors
 - [ ] UI/UX considerations (how are we going to use this)
 
 ### My App features:
-- [ ] Generate 5 random colors
-- [ ] Give the user the Hexcode for those colors
+- [x] Generate 5 random colors
+- [x] Give the user the Hexcode for those colors
 - [ ] Have options to save single colors
 - [ ] Have options to save a pallete
 - [ ] Access a list of favorite colors
