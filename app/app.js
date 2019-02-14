@@ -45,4 +45,22 @@ $(document).ready(function(){
     $('.container-data').text('');
   });
 
+
+  function getRandomColor() {
+    var letters = '0123456789ABCDEF';
+    var color = '#';
+    for (var i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+  }
+
+  $('.btn-randomize').on('click', function(){
+    var arrayOfPanels = [1, 2, 3, 4, 5];
+    arrayOfPanels.forEach(function(i){
+      var tempColor = getRandomColor();
+      $('.color-panel' + i).css({'background-color': tempColor});
+      $('.color-label' + i).text(tempColor);
+    })
+  })
 });
