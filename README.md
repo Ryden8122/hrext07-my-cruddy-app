@@ -1,8 +1,8 @@
 # hrext07-my-cruddy-app
-Create Read Update and Delete framework using JS
+Extending John's CRUD app framework, to create, save, and delete favorite colors
 
 
-## Tasks
+## Features and Tasks
 
 ### Basic Reqs
 - [ ] Where to store data? (localstorage)
@@ -11,5 +11,15 @@ Create Read Update and Delete framework using JS
 - [ ] How to view data? (style?)
 - [ ] UI/UX considerations (how are we going to use this)
 
-### Advanced Reqs
-- [ ] Item that I added goes here...
+### My App features:
+- [ ] Generate 5 random colors
+- [ ] Give the user the Hexcode for those colors
+- [ ] Have options to save single colors
+- [ ] Have options to save a pallete
+- [ ] Access a list of favorite colors
+- [ ] Access a list of favorite palletes
+- [ ] Delete from list of favorite colors
+- [ ] Delete from list of favoite palletes
+
+### Furter features:
+- [ ] Reload a saved pallete
