@@ -1,17 +1,13 @@
-body {
-	display:flex;
+.btn-container {
+	height: 25px;
+	width:  100%;
+	display: flex;
 	justify-content: center;
 }
 
 .app-container{
 	display: flex;
-	align-items: flex-end;
-}
-
-.btn-container {
-	height: 25px;
-	width: 1000px;
-	display: flex;
+	width: 100%;
 	justify-content: center;
 }
 
@@ -20,7 +16,7 @@ body {
 	width: 100px;
 }
 
-.btn-save {
+.btn-savePalette {
 	height: 25px;
 	width: 100px;
 }
@@ -56,4 +52,9 @@ body {
 	background-color: #262626;
 	height: 500px;
 	width: 200px;
+}
+
+.siteBanner{
+	height: 50px;
+	width: 100%;
 }
