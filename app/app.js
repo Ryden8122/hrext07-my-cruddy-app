@@ -63,4 +63,8 @@ $(document).ready(function(){
       $('.color-label' + i).text(tempColor);
     })
   })
+
+  $('.color-panel1').on('hover', function(){
+    
+  })
 });
