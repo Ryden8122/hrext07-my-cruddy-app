@@ -1,3 +1,17 @@
+body {
+background-color: #f5f5f5;
+background-image: url("https://www.transparenttextures.com/patterns/ps-neutral.png");
+/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+	padding: 0;
+	margin: 0;
+}
+
+.siteBanner{
+	width: 100%;
+	margin-left: 5%;
+	height: 50px;
+}
+
 .btn-container {
 	height: 25px;
 	width:  100%;
@@ -18,7 +32,7 @@
 
 .btn-savePalette {
 	height: 25px;
-	width: 100px;
+	width: 150px;
 }
 
 .color-container {
@@ -28,6 +42,8 @@
 	width: 1000px;
 }
 
+
+/* App Panels */
 .color-panel1 {
 	background-color: #262626;
 	height: 500px;
@@ -54,7 +70,24 @@
 	width: 200px;
 }
 
-.siteBanner{
-	height: 50px;
-	width: 100%;
+/* Color Labels */
+.color-label1{
+	color: white;
+	background: rgba(0, 0, 0, 0.3);
+}
+.color-label2{
+	color: white;
+	background: rgba(0, 0, 0, 0.3);
+}
+.color-label3{
+	color: white;
+	background: rgba(0, 0, 0, 0.3);
+}
+.color-label4{
+	color: white;
+	background: rgba(0, 0, 0, 0.3);
+}
+.color-label5{
+	color: white;
+	background: rgba(0, 0, 0, 0.3);
 }
