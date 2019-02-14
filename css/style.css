@@ -72,22 +72,60 @@ background-image: url("https://www.transparenttextures.com/patterns/ps-neutral.p
 
 /* Color Labels */
 .color-label1{
+	visibility: hidden;	
+	position: relative;
+	top: 85%;
+	text-align: center;
 	color: white;
 	background: rgba(0, 0, 0, 0.3);
 }
 .color-label2{
+	visibility: hidden;	
+	position: relative;
+	top: 85%;
+	text-align: center;
 	color: white;
 	background: rgba(0, 0, 0, 0.3);
 }
 .color-label3{
+	visibility: hidden;	
+	position: relative;
+	top: 85%;
+	text-align: center;
 	color: white;
 	background: rgba(0, 0, 0, 0.3);
 }
 .color-label4{
+	visibility: hidden;	
+	position: relative;
+	top: 85%;
+	text-align: center;
 	color: white;
 	background: rgba(0, 0, 0, 0.3);
 }
 .color-label5{
+	visibility: hidden;
+	position: relative;
+	top: 85%;
+	text-align: center;
 	color: white;
 	background: rgba(0, 0, 0, 0.3);
+}
+
+/* Save Buttons */
+
+.btn1 {
+	visibility: hidden;
+}
+.btn2 {
+	visibility: hidden;	
+}
+.btn3 {
+	visibility: hidden;	
+}
+.btn4 {
+	visibility: hidden;	
+}
+.btn5 {
+	visibility: hidden;	
 }
