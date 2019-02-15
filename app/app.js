@@ -127,6 +127,27 @@ $(document).ready(function(){
     displayAllItemsInLocalStorage();
   })
 
+  //Update Palette with name in form
+  $('.btn-update').on('click', function(e){
+    var keyToOverWrite = $('.loadPaletteName').val();
+
+    if (!localStorage.getItem(keyToOverWrite)){
+      alert("Cannot overwrite and non-existing palette!");
+    } else {
+      var arrayOfPanels = [1, 2, 3, 4, 5];
+      arrayOfPanels.forEach(function(i){
+          var temp = $('.color-label' + i).text();
+          favPalettes.push(temp);
+          localStorage.setItem(keyToOverWrite, JSON.stringify(favPalettes));
+        })
+      favPalettes = [];
+    }
+
+    $('.loadPaletteName').val('');
+    refreshmySavedPaletteNamesClass();
+    displayAllItemsInLocalStorage();
+  })
+
   //Load Palette Button
   $('.btn-loadPalette').on('click', function(e){
     var arrayOfPanels = [1, 2, 3, 4, 5];
