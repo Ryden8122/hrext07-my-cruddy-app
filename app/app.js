@@ -59,7 +59,7 @@ $(document).ready(function(){
     return color;
   }
 
-  //On click event for Randomize Button
+  //Randomize Button
   $('.btn-randomize').on('click', function(){
     var arrayOfPanels = [1, 2, 3, 4, 5];
     arrayOfPanels.forEach(function(i){
@@ -70,7 +70,7 @@ $(document).ready(function(){
   })
 
 
-  //On click event for Show/Hide Labels button
+  //Show Labels Button
   $('.btn-toggleLabelsOn').on('click', function(){
     showLabelsStatus = true;
     var arrayOfLabels = [1, 2, 3, 4, 5];
@@ -79,6 +79,7 @@ $(document).ready(function(){
     }) 
   })
 
+  //Hide Labels Button
   $('.btn-toggleLabelsOff').on('click', function(){
     showLabelsStatus = false;
     var arrayOfLabels = [1, 2, 3, 4, 5];
@@ -87,25 +88,37 @@ $(document).ready(function(){
     }) 
   })
 
+  //Save Palette Button
   $('.btn-savePalette').on('click', function(e){
     var arrayOfPanels = [1, 2, 3, 4, 5];
     var saveName = $('.savePaletteName').val();
 
     //first check if the existing palletName exists
-    if (!localStorage.getItem(saveName)){
-      arrayOfPanels.forEach(function(i){
-        var temp = $('.color-label' + i).text();
-        favPalettes.push(temp);
-        localStorage.setItem(saveName, JSON.stringify(favPalettes));
-      })
-      //clear the favPalettes for next save
-      favPalettes = [];
+    if (saveName === ''){
+      alert("Please give this palette a name!");
+    } else {
+
+      if (!localStorage.getItem(saveName)){
+        arrayOfPanels.forEach(function(i){
+          var temp = $('.color-label' + i).text();
+          favPalettes.push(temp);
+          localStorage.setItem(saveName, JSON.stringify(favPalettes));
+        })
+        //clear the favPalettes for next save
+        favPalettes = [];
+      }
     }
   })
 
+  //Load Palette Button
   $('.btn-loadPalette').on('click', function(e){
     var arrayOfPanels = [1, 2, 3, 4, 5];
     var loadName = $('.loadPaletteName').val();
+
+    if (!localStorage.getItem(loadName)){
+      alert("This color palette does not exist!")
+    }
+
     var colorsToLoad = JSON.parse(localStorage.getItem(loadName));
     console.log(typeof colorsToLoad);
     arrayOfPanels.forEach(function(i){
@@ -114,6 +127,19 @@ $(document).ready(function(){
     })
   })
 
+  //Delete Button
+  $('.btn-deletePalette').on('click', function(e){
+    var toDelete = $('.loadPaletteName').val();
+
+    if (!localStorage.getItem(toDelete)){
+      alert("Cannot delete non-existing palette")
+    } else {
+      localStorage.removeItem(toDelete);
+    }
+
+  })
+
+  //Reset Button
   $('.btn-reset').on('click', function(e){
     var arrayOfPanels = [1, 2, 3, 4, 5];
     arrayOfPanels.forEach(function(i){
