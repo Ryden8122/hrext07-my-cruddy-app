@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>CRUD-A-Color</title>
+
   <script
           src="https://code.jquery.com/jquery-3.3.1.js"
           integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
@@ -10,13 +11,16 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js"></script>
   <script src="app/app.js"></script>
   <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
 
 </head>
 
 <header>
     <div class="siteBanner">
+      <div id="logo">
+      </div>
       <div id="brand">
-        Soko Apps
+        <a href="https://twitter.com/ryden_exe">Soko Apps</a>
       </div>
     </div>
 </header>
@@ -37,6 +41,10 @@
   <div class="container-data"></div>
 </div>
 -->
+
+      <div class="appTitle">
+        CrUD-A-Color!
+      </div>
 
 <!-- This container holds 5 color panels, whose colors will be generated randomly -->
 <div class="app-container">
@@ -73,11 +81,16 @@
     <button class="btn-toggleLabelsOff">Hide Labels</button>
   </div> 
   <div class="btn-container2">
-    <button class="btn-reset">Reset</button>
+    <button class="btn-reset">Reset Panels</button>
     <input type="text" class="loadPaletteName" placeholder="Enter an existing Palette's name...">
     <button class="btn-loadPalette">Load Palette</button>
     <button class="btn-deletePalette">Delete Palette</button>
   </div> 
+</div>
+
+<div class="savedPalettes">
+  <div class="listOfExistingPalettes">Existing Saved Palettes: </div>
+  <div class="mySavedPaletteNames"> </div>
 </div>
 
 </body>

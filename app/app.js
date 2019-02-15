@@ -12,6 +12,18 @@ $(document).ready(function(){
   var favPalettes = [];
   var showLabelsStatus = false;
 
+  //This is absurdly crude but it's the only way to access these items at the moment
+  function displayAllItemsInLocalStorage(){
+    for (var i = 0; i < localStorage.length; i++){
+      $('.mySavedPaletteNames').append('<div class="nameLabel">' + " " + localStorage.key(i) + ", " + '</div>')
+    }
+  }
+
+  function refreshmySavedPaletteNamesClass(){
+    $('.mySavedPaletteNames').empty();
+  }
+
+  displayAllItemsInLocalStorage();
 
   $('.btn-add').on('click', function(e){
     console.log(e);
@@ -107,6 +119,8 @@ $(document).ready(function(){
         //clear the favPalettes for next save
         favPalettes = [];
       }
+      refreshmySavedPaletteNamesClass();
+      displayAllItemsInLocalStorage();
     }
   })
 
@@ -137,6 +151,8 @@ $(document).ready(function(){
       localStorage.removeItem(toDelete);
     }
 
+    refreshmySavedPaletteNamesClass();
+    displayAllItemsInLocalStorage();
   })
 
   //Reset Button
