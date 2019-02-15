@@ -8,6 +8,9 @@ interact with localstorage
 $(document).ready(function(){
   // this is where we jquery
   //var keyData = 'ourKey'; // going to need to make this dynamic?
+  var favColors = [];
+  var favPalettes = [];
+  var showLabelsStatus = false;
 
 
   $('.btn-add').on('click', function(e){
@@ -44,7 +47,7 @@ $(document).ready(function(){
     localStorage.clear();
     $('.container-data').text('');
   });
-
+  
 
   //Functions for buttons in .btn-container
   function getRandomColor() {
@@ -56,6 +59,7 @@ $(document).ready(function(){
     return color;
   }
 
+  //On click event for Randomize Button
   $('.btn-randomize').on('click', function(){
     var arrayOfPanels = [1, 2, 3, 4, 5];
     arrayOfPanels.forEach(function(i){
@@ -66,14 +70,33 @@ $(document).ready(function(){
   })
 
 
-  //Functions for color panels
+  //On click event for Show/Hide Labels button
+  $('.btn-toggleLabelsOn').on('click', function(){
+    showLabelsStatus = true;
+    var arrayOfLabels = [1, 2, 3, 4, 5];
+    arrayOfLabels.forEach(function(i){
+      $('.color-label' + i).css("visibility", "visible")
+    }) 
+  })
 
+  $('.btn-toggleLabelsOff').on('click', function(){
+    showLabelsStatus = false;
+    var arrayOfLabels = [1, 2, 3, 4, 5];
+    arrayOfLabels.forEach(function(i){
+      $('.color-label' + i).css("visibility", "hidden")
+    }) 
+  })
+
+
+  //Hover events for color panels
   //.color-panel1
   $('.color-panel1').hover(function(){
     $('.color-label1').css("visibility", "visible");
     $('.btn1').css("visibility", "visible");
   }, function(){
-    $('.color-label1').css("visibility", "hidden");
+    if (showLabelsStatus === false){
+      $('.color-label1').css("visibility", "hidden");   
+    }
     $('.btn1').css("visibility", "hidden");
   })
 
@@ -82,7 +105,9 @@ $(document).ready(function(){
     $('.color-label2').css("visibility", "visible");
     $('.btn2').css("visibility", "visible");
   }, function(){
-    $('.color-label2').css("visibility", "hidden");
+    if (showLabelsStatus === false){
+      $('.color-label2').css("visibility", "hidden");
+    }
     $('.btn2').css("visibility", "hidden");
   })
 
@@ -91,7 +116,9 @@ $(document).ready(function(){
     $('.color-label3').css("visibility", "visible");
     $('.btn3').css("visibility", "visible");
   }, function(){
-    $('.color-label3').css("visibility", "hidden");
+    if (showLabelsStatus === false){
+      $('.color-label3').css("visibility", "hidden");
+    }
     $('.btn3').css("visibility", "hidden");
   })
 
@@ -100,7 +127,9 @@ $(document).ready(function(){
     $('.color-label4').css("visibility", "visible");
     $('.btn4').css("visibility", "visible");
   }, function(){
-    $('.color-label4').css("visibility", "hidden");
+    if (showLabelsStatus === false){
+      $('.color-label4').css("visibility", "hidden");
+    }
     $('.btn4').css("visibility", "hidden");
   })
 
@@ -109,17 +138,9 @@ $(document).ready(function(){
     $('.color-label5').css("visibility", "visible");
     $('.btn5').css("visibility", "visible");
   }, function(){
-    $('.color-label5').css("visibility", "hidden");
+    if (showLabelsStatus === false){
+      $('.color-label5').css("visibility", "hidden");
+    }
     $('.btn5').css("visibility", "hidden");
-  })
-
-
-  //Function for Show/Hide Labels button
-  $('.btn-toggleLables').on('click', function(){
-    var arrayOfLabels = [1, 2, 3, 4, 5];
-    arrayOfLabels.forEach(function(i){
-      $('.color-label' + i).css("visibility", "visible")
-    }) 
-    $('.btn-toggleLables').text("Hide Labels")
   })
 });
