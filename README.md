@@ -17,7 +17,7 @@ Extending John's CRUD app framework, to create, save, and delete favorite colors
 - [ ] Have options to save single colors
 - [x] Have options to save a palette
 - [ ] Show a list of favorite colors
-- [ ] Show a list of favorite palettes
+- [x] Show a list of favorite palettes
 - [ ] Delete from list of favorite colors
 - [x] Delete from list of favoite palettes
 - [ ] Load save color
@@ -26,8 +26,8 @@ Extending John's CRUD app framework, to create, save, and delete favorite colors
 ### To dos
 - [x] Add a button to each color panel (currently disabled)
 - [x] show the button to save the color when the user hovers over the panel, hides when not hovored (also disabled)
-- [ ] Add a list div (this is where the app will store favorite colors and their hex code)
-- [ ] Add a list div for color palettes
+- [x] Add a list div (this is where the app will store favorite colors and their hex code)
+- [x] Add a list div for color palettes
 
 ### Notes:
 How can we save favorite colors and favorite palettes?
