@@ -118,10 +118,13 @@ $(document).ready(function(){
         })
         //clear the favPalettes for next save
         favPalettes = [];
+      } else {
+        alert("This item already exists!");
       }
-      refreshmySavedPaletteNamesClass();
-      displayAllItemsInLocalStorage();
     }
+    $('.savePaletteName').val('');
+    refreshmySavedPaletteNamesClass();
+    displayAllItemsInLocalStorage();
   })
 
   //Load Palette Button
@@ -151,6 +154,7 @@ $(document).ready(function(){
       localStorage.removeItem(toDelete);
     }
 
+    $('.loadPaletteName').val('');
     refreshmySavedPaletteNamesClass();
     displayAllItemsInLocalStorage();
   })
