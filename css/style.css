@@ -12,7 +12,19 @@ background-image: url("https://www.transparenttextures.com/patterns/ps-neutral.p
 	height: 50px;
 }
 
+
+.theGreatButtonContainer {
+	
+}
+
 .btn-container {
+	height: 25px;
+	width:  100%;
+	display: flex;
+	justify-content: center;
+}
+
+.btn-container2 {
 	height: 25px;
 	width:  100%;
 	display: flex;
@@ -115,6 +127,12 @@ background-image: url("https://www.transparenttextures.com/patterns/ps-neutral.p
 /* Save Buttons */
 
 .btn1 {
+	border: none;
+	color: white;
+	height: 50px;
+	width: 50px;
+	cursor: pointer;
+	background: rgba(0, 0, 0, 0.1);
 	visibility: hidden;
 }
 .btn2 {

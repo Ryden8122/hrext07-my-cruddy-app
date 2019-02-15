@@ -47,7 +47,7 @@ $(document).ready(function(){
     localStorage.clear();
     $('.container-data').text('');
   });
-  
+
 
   //Functions for buttons in .btn-container
   function getRandomColor() {
@@ -87,6 +87,19 @@ $(document).ready(function(){
     }) 
   })
 
+  $('.btn-savePalette').on('click', function(e){
+    var arrayOfPanels = [1, 2, 3, 4, 5];
+    var saveName = $('.savePaletteName').val();
+
+    //first check if the existing palletName exists
+    if (!localStorage.getItem(saveName)){
+      arrayOfPanels.forEach(function(i){
+        var temp = $('.color-label' + i).text();
+        favPalettes.push(temp);
+        localStorage.setItem(saveName, favPalettes);
+      })
+    }
+  })
 
   //Hover events for color panels
   //.color-panel1
