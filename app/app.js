@@ -96,9 +96,23 @@ $(document).ready(function(){
       arrayOfPanels.forEach(function(i){
         var temp = $('.color-label' + i).text();
         favPalettes.push(temp);
-        localStorage.setItem(saveName, favPalettes);
+        localStorage.setItem(saveName, JSON.stringify(favPalettes));
       })
+      //clear the favPalettes for next save
+      favPalettes = [];
     }
+  })
+
+  $('.btn-loadPalette').on('click', function(e){
+    var arrayOfPanels = [1, 2, 3, 4, 5];
+    var loadName = $('.loadPaletteName').val();
+    var colorsToLoad = JSON.parse(localStorage.getItem(loadName));
+    console.log(typeof colorsToLoad);
+    arrayOfPanels.forEach(function(i){
+
+      $('.color-panel' + i).css({'background-color': colorsToLoad[i - 1]})
+      $('.color-label' + i).text(colorsToLoad[i - 1])
+    })
   })
 
   //Hover events for color panels
