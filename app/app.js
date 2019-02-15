@@ -109,9 +109,16 @@ $(document).ready(function(){
     var colorsToLoad = JSON.parse(localStorage.getItem(loadName));
     console.log(typeof colorsToLoad);
     arrayOfPanels.forEach(function(i){
-
       $('.color-panel' + i).css({'background-color': colorsToLoad[i - 1]})
       $('.color-label' + i).text(colorsToLoad[i - 1])
+    })
+  })
+
+  $('.btn-reset').on('click', function(e){
+    var arrayOfPanels = [1, 2, 3, 4, 5];
+    arrayOfPanels.forEach(function(i){
+      $('.color-panel' + i).css({'background-color': '#262626'})
+      $('.color-label' + i).text('#262626');
     })
   })
 
